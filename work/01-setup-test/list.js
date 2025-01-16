@@ -3,6 +3,7 @@ const path = require('path');
 const people = `
 Name           |  NEUID   | Email                     | Slack handle           | github username
 Brett Ritter   | ???      | b.ritter@northeastern.edu | @Brett Ritter (He/Him) | swiftone
+Gayatri Dubey  | 002477062      | dubey.g@northeastern.edu | @Gayatri Dubey (She/Her) | gayatridt
 
 `.split('\n') // convert to array of lines
 .filter( line => !!line.replace(/\s/g,'' )); // Remove empty lines
