@@ -1,0 +1,10 @@
+.animal-list {
+    border: 3px solid #4a90e2;
+    padding: 1.5em;
+    list-style-type: "\1F431";
+}
+
+a {
+    color: #2c3e50;
+    text-decoration: underline;
+}
