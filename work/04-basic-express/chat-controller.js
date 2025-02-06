@@ -1,5 +1,5 @@
-const model = require('./chat-model'); // holds all the non-web logic for managing users/messages
-const view = require('./chat-view'); // holds the templates for the generated HTML
+const model = require('./chat-model'); 
+const view = require('./chat-view'); 
 
 const controllers = {};
 
@@ -8,10 +8,11 @@ controllers.viewChat = function( req, res ) {
 };
 
 controllers.postMessage = function( req, res ) {
-  // Below includes an example of pulling fields from a POST request body
-  const { text } = req.body; // You'll need to add something!
-  // Fill in here - Do not return HTML, just update server data
-  res.redirect('/'); // Redirect to the home page
+  const { sender, text } = req.body; 
+  if(sender && text) {
+    model.addMessage({ sender, text });
+  }
+  res.redirect('/'); 
 };
 
 module.exports = controllers;

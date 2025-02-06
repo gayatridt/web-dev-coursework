@@ -1,24 +1,25 @@
-// This object has methods that produce HTML
-// - These methods are passed data used to produce the HTML
-// - In this case, they are passed the model
-
 const chatView = {
   chatPage: function(model) {
-    // chatPage() returns the HTML for the page
-    // it calls the other methods to generate the HTML for different sections
-    // Fill in/modify anything below!
     return `
       <!doctype html>
       <html lang="en">
         <head>
           <meta charset="UTF-8">
-          <title>Chat</title>
+          <title>Group Chat</title>
+          <link rel="stylesheet" href="/chat.css">
         </head>
         <body>
           <div id="chat-app">
-            ${chatView.getUserList(model)}
-            ${chatView.getMessageList(model)}
-            ${chatView.getSendMessageForm(model)}
+            <h1>Group Chat</h1>
+            <div class="container">
+              <div class="left-column">
+                ${this.getUserList(model)}
+              </div>
+              <div class="right-column">
+                ${this.getMessageList(model)}
+                ${this.getSendMessageForm(model)}
+              </div>
+            </div>
           </div>
         </body>
       </html>
@@ -26,38 +27,57 @@ const chatView = {
   },
 
   getMessageList: function(model) {
-    return `<ol class="messages">` +
-      // Fill in
-      // Generate the HTML for the list of messages
-      `</ol>`;
+    return `
+      <div class="message-list">
+        <h2>Chat</h2>
+        <ol class="messages">
+          ${model.messages.map(message => `
+            <li>
+              <img src="${message.avatar}" alt="${message.sender}'s avatar" class="avatar">
+              <span class="sender">${message.sender}</span>
+              <span class="text">${message.text}</span>
+            </li>
+          `).join('')}
+        </ol>
+      </div>
+    `;
   },
 
   getUserList: function(model) {
-    // This is a bit of a complex structure
-    // Lookup Object.values() in MDN
-    // .map() generates a new array based on calling the callback
-    // on each element of the array
-    // So this .map() converts the user names to an array of HTML
-    // and .join() converts the array of HTML into a single HTML string
-    return `<ul class="users">` +
-    Object.values(model.users).map( user => `
-      <li>
-        <div class="user">
-          <span class="username">${user}</span>
-        </div>
-      </li>
-    `).join('') +
-    `</ul>`;
+    return `
+      <div class="user-list">
+        <h2>Logged-In Users</h2>
+        <ul class="users">
+          ${Object.values(model.users).map(user => `
+            <li>
+              <img src="${user.avatar}" alt="${user.name}'s avatar" class="avatar">
+              <span class="username">${user.name}</span>
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    `;
   },
 
-  getSendMessageForm: function() {
-    // Fill in
-    // Generate the HTML for a form to send a message
-    return `FIXME`;
+  getSendMessageForm: function(model) {
+    return `
+      <form action="/chat" method="POST" class="chat-form">
+        <div class="form-group">
+          <label for="sender">Select User:</label>
+          <select name="sender" id="sender" required>
+            ${Object.keys(model.users).map(user => `
+              <option value="${user}">${user}</option>
+            `).join('')}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="text">Type your message:</label>
+          <input type="text" name="text" id="text" placeholder="Enter your message" required>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    `;
   }
 };
-
-// These files demonstrating various ways of building our exports
-// so they are inconsistent in ways "real" projects usually wouldn't want
 
 module.exports = chatView;
