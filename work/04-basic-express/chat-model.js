@@ -1,26 +1,30 @@
-const users = { // Yes, an object!  Keep this as an object, you may change the usernames and values
-  "Amit": "Amit", // The keys let you check to see if the user is logged in
-  "Bao": "Bao",  // the values don't really matter, here we reuse the username, but it could be `true`
+const defaultAvatar = "/images/default-avatar.jpg";
+
+const users = {
+  "Amit": { name: "Amit", avatar: "/images/avatar-amit.jpg" },
+  "Bao": { name: "Bao", avatar: "/images/avatar-bao.jpg" },
+  "Charles": { name: "Charles", avatar: defaultAvatar },
+  "David": { name: "David", avatar: "/images/avatar-david.jpg" },
 };
 
-const messages = [ // Notice: An array of objects
+const messages = [ 
   {
     sender: "Amit",
     text: "You up?",
+    avatar: "/images/avatar-amit.jpg" 
   },
   {
     sender: "Bao",
     text: "Yeah, still working on this INFO6250 work, but I keep getting distracted by cat videos",
+    avatar: "/images/avatar-bao.jpg" 
   }
 ];
 
-// Below uses destructuring
-function addMessage({ sender, text }) { // Leave this as `sender` - I want to see you solve the name disagreement
-  // Fill in!
+function addMessage({ sender, text }) { 
+  const user = users[sender] || { name: sender, avatar: defaultAvatar };
+  messages.push({ sender: user.name, text, avatar: user.avatar });
 }
 
-// These files demonstrating various ways of building our exports
-// so they are inconsistent in ways "real" projects usually wouldn't want
 const chatModel = {
   users,
   messages,
