@@ -1,0 +1,374 @@
+:root {
+    --primary-color: #7c3aed;
+    --primary-dark: #6d28d9;
+    --secondary-color: #4f46e5;
+    --background-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --success-color: #059669;
+    --error-color: #dc2626;
+    --border-radius: 0.5rem;
+    --shadow-sm: 0 0.0625rem 0.1875rem rgba(0,0,0,0.1);
+    --shadow-md: 0 0.25rem 0.375rem rgba(0,0,0,0.1);
+}
+
+.game-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.game-header {
+    background-color: var(--card-bg);
+    padding: 0.25rem 1rem;
+    min-height: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.game-title {
+    color: var(--primary-color);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    flex: 1;
+    max-width: 100rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.game-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-section {
+    background-color: var(--card-bg);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.input-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+    display: block;
+    text-transform: capitalize;
+    padding-top: 0.5rem;
+}
+
+.win-message {
+    background-color: var(--success-color);
+    color: white;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.win-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.win-text {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.guess-form {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.guess-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 0.0625rem solid #e5e7eb;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.error-message {
+    color: var(--error-color);
+    background-color: #fee2e2;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.guesses-section {
+    background-color: var(--card-bg);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    flex-grow: 1;
+}
+
+.section-title {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.guesses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.guess-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 0.25rem;
+}
+
+.guess-text {
+    font-size: 1rem;
+}
+
+.match-count {
+    background-color: var(--success-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.words-section {
+    background-color: var(--card-bg);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    flex-grow: 1;
+}
+
+.word-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(3.5rem, 1fr));
+    gap: 0.25rem;
+}
+
+.word-item {
+    padding: 0.25rem;
+    text-align: center;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+}
+
+.word-guessed {
+    opacity: 0.7;
+    text-decoration: line-through;
+    background-color: #ffebee;
+    color: #d32f2f; 
+}
+
+.stats-section {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 0.5rem;
+}
+
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.25rem;
+    min-height: 2rem;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    margin-bottom: 0.125rem;
+    color: var(--text-secondary);
+}
+
+.stat-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.subsection-title {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.leader-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.leader-name {
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.leader-score {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.stats-content.collapsed {
+    display: none;
+}
+
+.leader-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    margin-bottom: 0.5rem;
+}
+
+.leader-score {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.leader-score::after {
+    content: "points";
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.leader-name {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+
+@media (max-width: 48rem) {
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+
+    .game-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .header-actions {
+        width: 100%;
+    }
+
+    .guess-form {
+        flex-direction: column;
+    }
+
+    .side-panel {
+        order: -1;
+    }
+}
+
+@media (max-width: 30rem) {
+    .game-container {
+        padding: 0.5rem;
+    }
+
+    .header-actions {
+        flex-direction: column;
+    }
+
+    .word-grid {
+        grid-template-columns: repeat(auto-fill, minmax(3.75rem, 1fr));
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
