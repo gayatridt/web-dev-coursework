@@ -1,4 +1,4 @@
-const uuid = require('crytpo').randomUUID;
+const uuid = require('crypto').randomUUID;
 
 const sessions = {};
 
