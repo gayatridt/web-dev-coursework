@@ -1,0 +1,39 @@
+.restaurant-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  min-height: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.restaurant-loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(90, 44, 13, 0.2);
+  border-radius: 50%;
+  border-top-color: #5a2c0d;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+.restaurant-loading-message {
+  color: #5a2c0d;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

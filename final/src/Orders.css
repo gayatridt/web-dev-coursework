@@ -1,0 +1,211 @@
+.restaurant-orders-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.restaurant-orders-title {
+  color: #5a2e14;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.restaurant-orders-error {
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.restaurant-no-orders {
+  text-align: center;
+  padding: 3rem 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.restaurant-no-orders-message {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.restaurant-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.restaurant-order-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.restaurant-order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant-order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.restaurant-order-title {
+  margin: 0;
+  color: #5a2e14;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.restaurant-order-status {
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.restaurant-status-preparing {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.restaurant-status-ready {
+  background-color: #e0f7fa;
+  color: #0097a7;
+}
+
+.restaurant-status-delivered {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.restaurant-status-cancelled {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.restaurant-order-date {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.restaurant-order-items {
+  margin-bottom: 1.5rem;
+}
+
+.restaurant-order-items-title {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.restaurant-order-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.restaurant-order-item {
+  display: flex;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.restaurant-item-quantity {
+  margin-right: 0.75rem;
+  color: #777;
+  min-width: 40px;
+}
+
+.restaurant-item-name {
+  flex: 1;
+}
+
+.restaurant-item-price {
+  font-weight: 600;
+  color: #e65c00;
+}
+
+.restaurant-order-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  font-weight: 600;
+  border-top: 2px solid #f0f0f0;
+}
+
+.restaurant-total-amount {
+  color: #e65c00;
+  font-size: 1.1rem;
+}
+
+.restaurant-order-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.restaurant-orders-loading {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurant-orders-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.restaurant-pagination-button {
+  background-color: #5a2e14;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.restaurant-pagination-button:hover {
+  background-color: #734225;
+}
+
+.restaurant-pagination-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.restaurant-pagination-info {
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .restaurant-order-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .restaurant-order-status {
+    margin-top: 0.5rem;
+  }
+}
