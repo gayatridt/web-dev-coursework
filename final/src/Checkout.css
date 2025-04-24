@@ -1,0 +1,208 @@
+.restaurant-checkout-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-checkout-title {
+  color: #5d4037;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.restaurant-checkout-items {
+  margin-top: 1.5rem;
+}
+
+.restaurant-checkout-section-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.restaurant-checkout-empty-cart-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+.restaurant-checkout-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.restaurant-checkout-item-details {
+  display: flex;
+  align-items: center;
+}
+
+.restaurant-checkout-item-quantity {
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.restaurant-checkout-item-name {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.restaurant-checkout-item-price {
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.restaurant-checkout-totals {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #ccc;
+}
+
+.restaurant-checkout-total-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.restaurant-checkout-total-line p {
+  margin: 0;
+}
+
+.restaurant-checkout-total-line-final {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d35400;
+}
+
+.restaurant-checkout-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.restaurant-checkout-place-order-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  flex: 2;
+  transition: background-color 0.3s ease;
+}
+
+.restaurant-checkout-place-order-btn:hover {
+  background-color: #388e3c;
+}
+
+.restaurant-checkout-place-order-btn:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.restaurant-checkout-back-to-menu-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s ease;
+}
+
+.restaurant-checkout-back-to-menu-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.restaurant-checkout-back-to-menu-btn:disabled {
+  color: #999;
+  cursor: not-allowed;
+}
+
+.restaurant-checkout-error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.restaurant-order-confirmation {
+  text-align: center;
+  padding: 2rem;
+}
+
+.restaurant-order-confirmation-title {
+  color: #4caf50;
+  border-bottom: none;
+}
+
+.restaurant-order-confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.restaurant-checkout-view-orders-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.restaurant-checkout-view-orders-btn:hover {
+  background-color: #1976d2;
+}
+
+.restaurant-checkout-continue-shopping-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.restaurant-checkout-continue-shopping-btn:hover {
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .restaurant-checkout-container {
+    padding: 1rem;
+  }
+  
+  .restaurant-checkout-actions {
+    flex-direction: column;
+  }
+  
+  .restaurant-order-confirmation-actions {
+    flex-direction: column;
+  }
+}

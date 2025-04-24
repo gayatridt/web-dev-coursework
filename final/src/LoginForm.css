@@ -1,0 +1,124 @@
+.restaurant-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.restaurant-login-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.restaurant-login-title {
+  text-align: center;
+  color: #5d4037;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.restaurant-login-error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.restaurant-login-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.restaurant-login-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.restaurant-login-form-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.restaurant-login-form-input:focus {
+  border-color: #ff7043;
+  box-shadow: 0 0 0 2px rgba(255, 112, 67, 0.2);
+}
+
+.restaurant-login-submit-button {
+  width: 100%;
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.restaurant-login-submit-button:hover {
+  background-color: #f4511e;
+}
+
+.restaurant-login-submit-button:disabled {
+  background-color: #ffab91;
+  cursor: not-allowed;
+}
+
+.restaurant-login-options {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.restaurant-login-toggle-button {
+  background: none;
+  border: none;
+  color: #ff7043;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.restaurant-login-toggle-button:hover {
+  text-decoration: underline;
+}
+
+.restaurant-login-toggle-button:disabled {
+  color: #ffab91;
+  cursor: not-allowed;
+}
+
+.restaurant-login-note {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.restaurant-login-note-text {
+  margin: 0.3rem 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,346 @@
+.restaurant-admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.restaurant-admin-heading {
+  color: #5a2e14;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #ff6b14;
+  padding-bottom: 0.5rem;
+}
+
+.restaurant-update-message {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurant-update-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.restaurant-update-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.restaurant-admin-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-category-filter {
+  display: flex;
+  align-items: center;
+}
+
+.restaurant-category-filter label {
+  margin-right: 0.5rem;
+  font-weight: 500;
+  color: #5a2e14;
+}
+
+.restaurant-category-filter select {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: white;
+  min-width: 150px;
+}
+
+.restaurant-add-item-btn {
+  background-color: #e65c00;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.restaurant-add-item-btn:hover {
+  background-color: #ff6b14;
+}
+
+.restaurant-add-item-form {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-add-item-form-title {
+  color: #5a2e14;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.restaurant-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.restaurant-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #5a2e14;
+}
+
+.restaurant-form-input,
+.restaurant-form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.restaurant-form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.restaurant-form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.restaurant-form-row .restaurant-form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.restaurant-checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.restaurant-checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #5a2e14;
+}
+
+.restaurant-checkbox-input {
+  margin-right: 0.5rem;
+  width: auto;
+}
+
+.restaurant-form-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.restaurant-submit-btn {
+  background-color: #e65c00;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.restaurant-submit-btn:hover {
+  background-color: #ff6b14;
+}
+
+.restaurant-cancel-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.restaurant-cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+.restaurant-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-admin-table-cell {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.restaurant-admin-table-header {
+  background-color: #f8f9fa;
+  color: #5a2e14;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.restaurant-admin-table-row:hover {
+  background-color: #f8f9fa;
+}
+
+.restaurant-admin-table-row-unavailable {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.restaurant-item-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+.restaurant-action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.restaurant-update-btn, .restaurant-delete-btn {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.3s;
+}
+
+.restaurant-update-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.restaurant-update-btn:hover {
+  background-color: #138496;
+}
+
+.restaurant-delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.restaurant-delete-btn:hover {
+  background-color: #c82333;
+}
+
+.restaurant-form-error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin: 0.3rem 0 0 0;
+}
+
+.restaurant-form-group:has(.restaurant-form-error) {
+  margin-bottom: 2rem;
+}
+
+.restaurant-update-message-text {
+  margin: 0;
+}
+
+.restaurant-update-message-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.restaurant-delete-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.restaurant-delete-confirm-dialog {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+}
+
+.restaurant-delete-confirm-title {
+  color: #5a2e14;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.restaurant-dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .restaurant-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .restaurant-form-row .restaurant-form-group {
+    margin-bottom: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .restaurant-admin-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .restaurant-admin-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .restaurant-action-buttons {
+    flex-direction: column;
+  }
+}
